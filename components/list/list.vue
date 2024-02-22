@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Liste de pages</h3>
+    <h2 class="text-center">Liste de pages</h2>
     <div class="grid sm:grid-cols-2 gap-16">
       <Item v-for="item in items" :key="item.slug" :item="item" />
     </div>
@@ -25,3 +25,4 @@ export default {
   },
 };
 </script>
+<style scoped></style>

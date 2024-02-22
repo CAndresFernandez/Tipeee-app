@@ -1,29 +1,34 @@
 <template>
-  <!-- prevent refresh on submit and call the submitForm function below which takes the input fields as input -->
-  <form v-on:submit.prevent="submitForm(fields)">
-    <h3>Ajouter une page</h3>
-    <div>
-      <label>Nom :</label>
-      <input
-        class="mb-16"
-        id="name"
-        v-model="fields.name"
-        type="text"
-        required
-      />
-    </div>
-    <div>
-      <label>Slug :</label>
-      <input
-        class="mb-16"
-        id="slug"
-        v-model="fields.slug"
-        type="text"
-        required
-      />
-    </div>
-    <button class="btn btn-primary" type="submit">Ajouter</button>
-  </form>
+  <div class="form-wrapper">
+    <!-- prevent refresh on submit and call the submitForm function below which takes the input fields as input -->
+    <form
+      v-on:submit.prevent="submitForm(fields)"
+      class="flex flex-col content-center"
+    >
+      <h2 class="text-center">Ajouter une page</h2>
+      <div class="input-wrapper flex justify-center">
+        <label class="pt-8 pr-8">Nom :</label>
+        <input
+          class="mb-16"
+          id="name"
+          v-model="fields.name"
+          type="text"
+          required
+        />
+      </div>
+      <div class="input-wrapper flex justify-center">
+        <label class="pt-8 pr-8">Slug :</label>
+        <input
+          class="mb-16"
+          id="slug"
+          v-model="fields.slug"
+          type="text"
+          required
+        />
+      </div>
+      <button class="btn btn-primary" type="submit">ajouter!</button>
+    </form>
+  </div>
 </template>
 
 <script>
@@ -75,16 +80,45 @@ input:not([type="radio"]):not([type="checkbox"]) {
   font-size: 1rem;
   font-weight: 400;
   padding: 0.5rem;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 }
 input:not([type="radio"]):not([type="checkbox"]):focus {
-  border-color: #4dc4d6;
-  box-shadow: inset 0 0 0 3px #b6e5ec;
+  border-color: #e9595b;
+  box-shadow: inset 0 0 3px 1px #e9595b;
   outline: 0;
 }
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  border: 1px solid #e9595b;
+  border-radius: 4px;
+  margin-top: 2rem;
+  height: fit-content;
+  padding: 2rem;
+  width: 75%;
+  box-shadow: inset 0 0 12px 3px #e9595b, 0 0 51px rgba(0, 0, 0, 0.1);
+}
 .btn {
-  background-color: #16ba16;
+  display: flex;
+  align-self: center;
+  width: 20%;
+  background-color: #d64658;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: white;
-  border-radius: 2px;
+  border-radius: 4px;
+  transition: all 0.1s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(1);
+}
+
+.input-wrapper {
+  margin-right: 50px;
 }
 </style>
