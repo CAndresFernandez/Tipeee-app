@@ -28,7 +28,6 @@ export default {
 a,
 h3 {
   text-decoration: none;
-  font-size: 1.25rem;
   font-weight: 600;
   color: white;
   padding: 0.2rem 0.5rem;

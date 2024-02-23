@@ -36,4 +36,12 @@ h2 {
   color: white;
   margin-bottom: 0;
 }
+
+@media (max-width: 576px) {
+  .layout-maxed {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+}
 </style>

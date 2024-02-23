@@ -6,20 +6,22 @@
       class="flex flex-col content-center"
     >
       <h2 class="text-center">Ajouter une page</h2>
-      <div class="input-wrapper flex justify-center">
-        <label class="pt-8 pr-8">Nom :</label>
+      <div class="flex justify-center">
+        <label for="name" class="pt-8 pr-8"></label>
         <input
           class="mb-16"
+          placeholder="Nom"
           id="name"
           v-model="fields.name"
           type="text"
           required
         />
       </div>
-      <div class="input-wrapper flex justify-center">
-        <label class="pt-8 pr-8">Slug :</label>
+      <div class="flex justify-center">
+        <label for="slug" class="pt-8 pr-8"></label>
         <input
           class="mb-16"
+          placeholder="Slug"
           id="slug"
           v-model="fields.slug"
           type="text"
@@ -83,28 +85,25 @@ input:not([type="radio"]):not([type="checkbox"]) {
   transition: all 0.2s ease;
 }
 input:not([type="radio"]):not([type="checkbox"]):focus {
-  border-color: #e9595b;
-  box-shadow: inset 0 0 3px 1px #e9595b;
+  border-color: #d64758;
+  box-shadow: inset 0 0 3px 1px #d64758;
   outline: 0;
 }
 .form-wrapper {
   display: flex;
   flex-direction: column;
   justify-self: center;
-  border: 1px solid #e9595b;
+  border: 1px solid #d64758;
   border-radius: 4px;
   margin-top: 2rem;
   height: fit-content;
-  padding: 2rem;
+  padding: 2rem 1rem;
   width: 75%;
-  box-shadow: inset 0 0 12px 3px #e9595b, 0 0 51px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 12px 3px #d64758, 0 0 51px rgba(0, 0, 0, 0.1);
 }
 .btn {
-  display: flex;
   align-self: center;
-  width: 20%;
-  background-color: #d64658;
-  font-size: 1.1rem;
+  background-color: #d64758;
   font-weight: 600;
   color: white;
   border-radius: 4px;
@@ -118,7 +117,7 @@ input:not([type="radio"]):not([type="checkbox"]):focus {
   transform: scale(1);
 }
 
-.input-wrapper {
-  margin-right: 50px;
+label {
+  display: none;
 }
 </style>

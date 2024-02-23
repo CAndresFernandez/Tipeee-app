@@ -105,7 +105,6 @@ article {
   border-radius: 4px;
   color: #fff;
   display: block;
-  font-size: 1.1rem;
   padding: 4px 13px;
   text-decoration: none;
 }

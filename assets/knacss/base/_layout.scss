@@ -6,8 +6,7 @@
 .layout-maxed {
   display: grid;
 
-  @each $key,
-  $value in $breakpoints {
+  @each $key, $value in $breakpoints {
     @media (min-width: #{$value}) {
       grid-template-columns:
         minmax($spacer-small, 1fr)
