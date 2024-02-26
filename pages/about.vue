@@ -55,6 +55,7 @@ h2 {
   padding: 2rem;
   width: 30%;
   margin: 1rem 0;
+  min-width: 350px;
   box-shadow: inset 0 0 12px 3px #e9595b, 0 0 51px rgba(0, 0, 0, 0.1);
 }
 </style>
